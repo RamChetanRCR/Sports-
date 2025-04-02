@@ -1,0 +1,48 @@
+.sign-page{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    height:100vh;
+    
+}
+
+.sign-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:400px;
+    gap: 10px;
+    border: 2px solid black;
+    padding: 50px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Adds a soft shadow */
+}
+
+h1{
+    font-weight:bold;
+    font-family:"Tinos",cursive;
+}
+.sign-form > label{
+    font-family: "caveat" ,cursive;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.sign-form > input{
+    padding:10px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}

@@ -1,0 +1,225 @@
+.athletes-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 100%);
+}
+
+.player-profile {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 3rem;
+  background: rgba(40, 44, 52, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 3rem;
+  backdrop-filter: blur(10px);
+}
+
+.player-profile h1 {
+  color: #ffffff;
+  font-size: 3.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 4px solid #4a90e2;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+.elo-rating {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+
+.elo-rating h2 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+  background: linear-gradient(45deg, #4a90e2, #61dafb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.elo-rating .stat-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  padding: 0.5rem;
+}
+
+.elo-rating .stat-box h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.elo-rating .stat-box p {
+  color: white;
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: 2px 2px 4px rgba(237, 230, 230, 0.5);
+}
+
+.career-stats {
+  display: grid;
+  gap: 2rem;
+}
+
+.career-stats h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  text-align: center;
+  position: relative;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.stat-box {
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #2c3e50, #1a1a1a);
+  border-radius: 15px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.05);
+}
+
+.stat-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(74, 144, 226, 0.1));
+  transition: transform 0.6s ease;
+}
+
+.stat-box:hover::before {
+  transform: translateX(100%);
+}
+
+.stat-box h3 {
+  color: #4a90e2;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.stat-box p {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 0;
+}
+
+.recent-performances {
+  display: grid;
+  gap: 2rem;
+}
+
+.recent-performances h2 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.performances-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.performance-card {
+  display: grid;
+  gap: 1rem;
+  background: rgba(40, 44, 52, 0.95);
+  border-radius: 15px;
+  padding: 2rem;
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.performance-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.performance-card h3 {
+  color: #4a90e2;
+  font-size: 1.5rem;
+  margin: 0;
+  text-align: center;
+}
+
+.performance-card .date {
+  color: #a0aec0;
+  font-size: 1rem;
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+}
+
+.performance-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  background: rgba(26, 32, 44, 0.8);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.performance-stats p {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .athletes-container {
+    padding: 1rem;
+  }
+  
+  .player-profile {
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+  
+  .player-profile h1 {
+    font-size: 2.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .performances-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat-box {
+    padding: 1.5rem;
+  }
+  
+  .performance-card {
+    padding: 1.5rem;
+  }
+}
